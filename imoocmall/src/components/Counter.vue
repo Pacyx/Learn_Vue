@@ -18,7 +18,9 @@
         },
         methods:{
             increment(){
-                this.$emit("incre")
+                this.$emit("incre");
+
+                // import('./../until');//异步加载js文件
             },
             decrement(){
                 this.$emit("decre")

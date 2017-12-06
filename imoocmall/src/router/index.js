@@ -6,6 +6,7 @@ import Title from '@/views/Title'
 import Image from '@/views/image'
 import Cart from '@/views/Cart'
 
+import Counter from '@/components/Counter'
 Vue.use(Router)
 
 export default new Router({
@@ -13,25 +14,23 @@ export default new Router({
   // mode:'hash'
   routes: [
     {
-      path: '/goods',
+      path: '/',
       name: 'GoodsList',
-      component: GoodsList,
-      children:[
-        {
-          path:'title',
-          name:'title',
-          component:Title
-        },
-        {
-          path:'img',
-          name:'img',
-          component:Image
-        }
-      ]
+      components:{
+        default:GoodsList,
+        title:Title,
+        img:Image
+      }
     },
     {
-      path: '/cart',
+      path: '/cart/:cartId',
+      name:'cart',
       component:Cart
+    },
+    {
+      path: '/goods',
+      name:'counter',
+      component:Counter
     }
   ]
 })

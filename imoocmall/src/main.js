@@ -4,7 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+// import {sum} from './until'
+// import * as until from './until'
+
+// console.log(`sum:${until.sum(1,3)}`); 
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
@@ -13,3 +17,14 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+// define('until',function(){
+//   return {
+//     sum:function(){
+
+//     },
+//     minus:function(){
+
+//     }
+//   }
+// })
