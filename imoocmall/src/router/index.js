@@ -1,12 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-import GoodsList from '@/views/GoodsList'
-import Title from '@/views/Title'
-import Image from '@/views/image'
-import Cart from '@/views/Cart'
+import GoodsList from './../views/GoodsList'
+import Img from './../views/image'
 
-import Counter from '@/components/Counter'
 Vue.use(Router)
 
 export default new Router({
@@ -15,22 +11,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'GoodsList',
-      components:{
-        default:GoodsList,
-        title:Title,
-        img:Image
-      }
+      component: GoodsList 
     },
     {
-      path: '/cart/:cartId',
-      name:'cart',
-      component:Cart
-    },
-    {
-      path: '/goods',
-      name:'counter',
-      component:Counter
+      path: '/xxx',
+      component: Img 
     }
+    // {
+    //   path: '/cart/:cartId',
+    //   name:'cart',
+    //   component:Cart
+    // },
+    // {
+    //   path: '/goods',
+    //   name:'counter',
+    //   component:Counter
+    // }
   ]
 })
