@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import GoodsList from './../views/GoodsList'
-import Img from './../views/image'
+import CartwithProduct from './../views/CartwithProduct.vue'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
     },
     {
       path: '/xxx',
-      component: Img 
+      component: CartwithProduct
     }
     // {
     //   path: '/cart/:cartId',

@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
 import VueResour from 'vue-resource'
 import VueLazyLoad from 'vue-lazyload'
+import Vuex from 'vuex'
+
+import  Store from './store/'
 // import {sum} from './until'
 // import * as until from './until'
 
@@ -18,10 +22,12 @@ Vue.use(VueLazyLoad,{
   loading:"/static/loading-svg/loading-balls.svg"
 })
 
+// Vue.use(Vuex)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  Store,
   template: '<App/>',
   components: { App }
 })
